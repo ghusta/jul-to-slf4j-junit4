@@ -2,6 +2,8 @@
 :icons: font
 :toc:
 
+image:https://travis-ci.org/ghusta/jul-to-slf4j-junit4.svg?branch=master["Build Status", link="https://travis-ci.org/ghusta/jul-to-slf4j-junit4"]
+
 == Overview
 
 JUnit 4.x integration for _jul-to-slf4j_ bridge.
