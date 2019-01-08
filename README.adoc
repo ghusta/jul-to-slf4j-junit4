@@ -1,0 +1,30 @@
+= JUnit 4.x Helpers for jul-to-slf4j bridge
+:icons: font
+:toc:
+
+== Overview
+
+JUnit 4.x integration for _jul-to-slf4j_ bridge.
+See more details on https://www.slf4j.org/legacy.html#jul-to-slf4j[jul-to-slf4j bridge].
+
+== Features
+
+* Adds a JUnit 4 https://junit.org/junit4/javadoc/4.12/org/junit/rules/TestRule.html[TestRule] with @ClassRule for initializing https://www.slf4j.org/api/org/slf4j/bridge/SLF4JBridgeHandler.html[SLF4JBridgeHandler].
+
+== Usage
+
+Use in a test class as :
+
+[source,java]
+----
+    @ClassRule
+    public static SLF4JBridgeHandlerInitializer slf4JBridgeHandlerInitializer = new SLF4JBridgeHandlerInitializer();
+----
+
+or using a singleton :
+
+[source,java]
+----
+    @ClassRule
+    public static SLF4JBridgeHandlerInitializer slf4JBridgeHandlerInitializer = SLF4JBridgeHandlerInitializer.INSTANCE;
+----
